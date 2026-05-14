@@ -1,0 +1,31 @@
+services:
+  smsbot:
+    build: .
+    container_name: smsbot
+    working_dir: /app
+    env_file:
+      - .env
+    command: ["python", "/app/bot.py"]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('https://api.telegram.org').read()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  relay:
+    profiles: ["relay"]
+    build: .
+    container_name: lvyatech-relay
+    working_dir: /app
+    env_file:
+      - .env
+    command: ["gunicorn", "-b", "0.0.0.0:8787", "relay:app"]
+    ports:
+      - "${RELAY_PORT:-8787}:8787"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request as u; u.urlopen('http://127.0.0.1:8787/healthz').read()"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

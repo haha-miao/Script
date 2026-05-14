@@ -1,0 +1,73 @@
+{
+  "wen": true,
+  "wdb": 99,
+  "ecr": 0,
+  "lsrf": true,
+  "nsrf": true,
+  "qdst": 2,
+  "srtmin": 2,
+  "schr": 4,
+  "tz": 8,
+  "tca": 15,
+  "otat": 3,
+  "ledOff": [21, 0, 8, 0],
+  "botm": [0, 0],
+  "amo": [1, 1],
+  "lss": [30, 30],
+  "vlss": [3, 3],
+  "plmn": ["", ""],
+  "sen": [false, false],
+  "ord": [20, 10],
+  "str2": ["SM", "SM"],
+  "tts": ["", ""],
+  "tdben": [true, true],
+  "sdben": [true, true],
+  "ci": [
+    { "cim": 0, "cirn": 2, "cims": 175 },
+    { "cim": 0, "cirn": 2, "cims": 175 }
+  ],
+  "sysArgs": {
+    "devSmsTs": { "en": "0" }
+  },
+  "adName": "admin",
+  "dIdStra": "{{WIFI_S_MAC}}",
+  "dNameStra": "{{PRODUCT_MODEL}}-{{devId}}",
+  "uip": [
+    {
+      "url": "http://your-server:8787/push?device_key=KEY1",
+      "method": 1,
+      "conType": 1,
+      "jcl": true,
+      "reqFreq": false,
+      "reqCnt": 20,
+      "pingIntvl": 110,
+      "ackMax": 8000,
+      "shutMode": 1,
+      "reqOkLog": true,
+      "reqErrLog": true,
+      "allType": [100, 101, 102, 204, 205, 209, 501, 502, 603],
+      "userArgs": {
+        "0": { "un": "title", "uv": "设备1提醒" },
+        "1": { "un": "device_key", "uv": "\"KEY1\"" },
+        "2": { "un": "device_key_more", "uv": "\"KEY2\",\"KEY3\"" },
+        "3": { "un": "group", "uv": "设备1" },
+        "4": { "un": "isArchive", "uv": "1" },
+        "5": { "un": "level", "uv": "active" },
+        "6": {
+          "un": "icon",
+          "uv": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/1a/c0/3c/1ac03ca5-8aed-d17a-6833-4343abec4603/messages-0-0-1x_U007epad-0-1-0-85-220.png/230x0w.webp"
+        },
+        "8": { "un": "devName", "uv": "设备（{{devId}}）", "en": "0" },
+        "10": { "en": "0" },
+        "11": { "en": "0" },
+        "12": { "en": "0" },
+        "13": { "en": "0" },
+        "14": { "en": "0" },
+        "15": { "en": "0" },
+        "7": { "en": "0" },
+        "9": { "en": "0" }
+      },
+      "tokstr": "{{ADMIN_NAME|$concat('|', '{{ADMIN_PWD}}')|$md5()}}"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+Ivyatech push templates copied from the legacy mixed example.json file.
+
+~~--==~~--==
+209
+{
+"title":"【设备1状态】",
+"subtitle":"卡{{slot}} 存在故障，请将卡放入手机检查原因！",
+"body":"SIM卡信息：{{LN}}→iccid：{{iccId}}{{LN}}→imsi：{{imsi}}{{LN}}→卡号：{{msIsdn}} {{scName|$jsonEscape()}}{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+603
+{
+"title":"【设备1卡{{slot}}来电】",
+"subtitle":"设备有一个未接来电。",
+"body":"→号码：{{phNum}}{{LN}}→时间：{{telStartTs|$ts2hhmmss(':')}} 至 {{telEndTs|$ts2hhmmss(':')}}{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}↑卡槽：{{msIsdn}}（卡{{slot}}）{{scName|$jsonEscape()}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+502
+{
+"title":"【设备1卡{{slot}}发短信成功】",
+"subtitle":"目标号码：{{phNum}}",
+"body":"短信内容：{{smsBd|$jsonEscape()|$replace('\\r\\n','\n','\\r','\n','\\n','\n')}}{{LN}}{{LN}}↑发出设备：{{{devName|$jsonEscape()}}}{{LN}}↑发出卡槽：{{msIsdn}}（卡{{slot}}）{{scName|$jsonEscape()}}{{LN}}→时间：{{YMDHMS}}{{LN}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+501
+{
+"title":"【设备1卡{{slot}}新短信】",
+"subtitle":"来自号码：{{phNum}}",
+"body":"短信内容：{{smsBd|$jsonEscape()|$replace('\\r\\n','\n','\\r','\n','\\n','\n')}}{{LN}}接收时间：{{smsTs|$ts2yyyymmddhhmmss('-',':')}}{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}↑来自卡槽：{{msIsdn}}（卡{{slot}}）{{scName|$jsonEscape()}}{{LN}}→时间：{{YMDHMS}}{{LN}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+205
+{
+"title":"【设备1状态】",
+"subtitle":"卡{{slot}} 已从设备中取出！",
+"body":"SIM卡信息：{{LN}}→iccid：{{iccId}}{{LN}}→imsi：{{imsi}}{{LN}}→卡号：{{msIsdn}} {{scName|$jsonEscape()}}{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+204
+{
+"title":"【设备1状态】",
+"subtitle":"卡{{slot}}”已就绪！",
+"body":"SIM卡信息：{{LN}}→iccid：{{iccId}}{{LN}}→imsi：{{imsi}}{{LN}}→卡号：{{msIsdn}} {{scName|$jsonEscape()}}{{LN}}→信号强度：{{dbm}}%{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+102
+{
+"title":"【设备1状态】",
+"subtitle":"设备已通过 卡2 上线！",
+"body":"SIM卡信息：{{LN}}→iccid：{{iccId}}{{LN}}→imsi：{{imsi}}{{LN}}→卡号：{{msIsdn}} {{scName|$jsonEscape()}}{{LN}}→信号强度：{{dbm}}%{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+101
+{
+"title":"【设备1状态】",
+"subtitle":"设备已通过 卡1 上线！",
+"body":"SIM卡信息：{{LN}}→iccid：{{iccId}}{{LN}}→imsi：{{imsi}}{{LN}}→卡号：{{msIsdn}} {{scName|$jsonEscape()}}{{LN}}→信号强度：{{dbm}}%{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
+~~--==~~--==
+100
+{
+"title":"【设备1状态】",
+"subtitle":"设备已通过 WiFi 上线！",
+"body":"→本机IP：{{ip}}{{LN}}→WiFi热点：{{ssid}}{{LN}}→信号强度：{{dbm}}%{{LN}}{{LN}}↑来自设备：{{{devName|$jsonEscape()}}}{{LN}}→时间：{{YMDHMS}}",
+"device_keys":[ {{{device_key}}} {{{device_key_more|$nothingIfNotBlank(',')}}} {{{device_key_more}}}],
+"level":"{{{level}}}",
+"group":"{{{group}}}",
+"isArchive":"{{{isArchive}}}",
+"icon":"{{{icon}}}"
+}
